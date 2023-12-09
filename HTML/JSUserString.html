@@ -1,0 +1,38 @@
+<!--Write an html that accepts a string in textfield and on button click displays the string in uppercase in a <p>-->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>User</title>
+        <script>
+            function f1(){
+                let input = document.getElementById("s1")
+                let s = input.value
+                let str = s.toUpperCase()
+                document.getElementById("p1").innerHTML = "<b>"+str+"</b>"
+            }
+            function f2(){
+                let input = document.getElementById("s1")
+                let s = input.value
+                let str = s.toLowerCase()
+                document.getElementById("p1").innerHTML = "<b>"+str+"</b>"
+            }
+            function f3(){
+                let input = document.getElementById("s1")
+                let s = input.value
+                let t = s.charAt(0).toUpperCase()
+                let str = s.substring(1).toLowerCase()
+                document.getElementById("p1").innerHTML = "<b>"+t+str+"</b>"
+            }
+        </script>
+    </head>
+    <body>
+        <b><i>Enter String :</i></b> <input type="text" id="s1"/>
+        <input type="button" value="Show Uppercase" onclick="f1()">
+        <input type="button" value="Show Lowercase" onclick="f2()">
+        <input type="button" value="Show Title" onclick="f3()">
+        <p id="p1"></p>
+
+
+    </body>
+    </html>
