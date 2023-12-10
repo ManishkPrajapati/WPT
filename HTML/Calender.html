@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+</head>
+<script>
+        function dname(){
+            let a = document.getElementById("d1").value.toLocalString('default',{a: 'long'})
+            // let b = document.getElementById("d1").value.getDay()
+            document.getElementById("m1").innerHTML = a
+        }
+</script>
+<body>
+   <fieldset>
+    Select Date : <input type="date" id="d1" onchange="dname()">
+    <p>Month Name : <span id="m1"></span></p>
+    <!--<p>Day Name : <span id="n1"></span></p>-->
+   </fieldset>
+</body>
+</html>

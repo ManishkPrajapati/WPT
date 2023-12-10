@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calci</title>
+</head>
+
+<script>
+    function calculate(){
+        let x = document.getElementById("n1").value
+        let y = document.getElementById("n2").value
+        let op = document.getElementById("s1").value
+        let res
+        switch (op) {
+            
+            case "+" : res = x+y; break;
+            case "-" : res = x-y; break;
+            case "*" : res = x*y; break;
+            case "/" : res = x/y; break;
+        }
+        let opt = x+" "+op+" "+y+"="+res
+        document.getElementById("sp1").innerHTML = opt
+    }
+</script>
+
+<body>
+    <center><b><i><u>CALCULATOR</u></i></b></center><br>
+    <br>
+    <fieldset>
+        Enter Number : <input type="number"  id="n1">
+        Enter Number : <input type="number"  id="n2"><br>
+        <center> Select :  <select id="s1" onchange="calculate()">
+           <option> select operation </option>
+            <option> + </option>
+            <option> - </option>
+            <option> * </option>
+            <option> / </option>            
+        </select> </center><br>
+        <p>The result is <span id="sp1"></span></p>
+    </fieldset>
+</body>
+</html>
