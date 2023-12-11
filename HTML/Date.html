@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATE</title>
+</head>
+<script>
+    function dateTime(){
+        let a = document.getElementById("d1").value
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        console.log(a)
+        const d = new Date(a);
+        let day = days[d.getDay()];
+        if( day.localeCompare("Sunday") == 0){
+            day = "Bank Holiday"
+        }
+        document.getElementById("s1").innerHTML = day
+    }
+</script>
+<body>
+    <fieldset>
+        Enter Date : <input type="date" id="d1" onchange="dateTime()">
+        <p>WeekDay : <span id="s1"></span></p>
+    </fieldset>
+</body>
+</html>

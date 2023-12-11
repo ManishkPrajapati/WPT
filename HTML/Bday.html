@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function BD(){
+        let a = document.getElementById("d1").value
+        const b = new Date(a)
+        console.log(b)
+        let c = b.getFullYear()
+        const d = new Date().getFullYear()
+        let e = d-c
+
+        let f = b.getMonth()
+        const g = new Date().getMonth()
+        
+        let i = b.getDate()
+        const j = new Date().getDate()
+        console.log(i)
+        console.log(j)
+        let k
+         if(f<=g && i<=j){
+                 k = "Birthday has Passed"
+            }else{
+                 k = "Yet to come"
+            }    
+
+
+        document.getElementById("s1").innerHTML = e
+        document.getElementById("s2").innerHTML = k
+    }
+</script>
+<body>
+    <fieldset>
+        Enter DOB : <input type="date" id="d1" onchange="BD()">
+        <p>Age is <span id="s1"></span></p>
+        <p><span id="s2"></span></p>
+    </fieldset>
+</body>
+</html>
