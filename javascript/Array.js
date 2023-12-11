@@ -1,0 +1,10 @@
+let arr = [15,12,47,10]
+console.log(arr)
+arr.push(84,56,52)
+console.log(arr)
+console.log(arr.pop())
+console.log(arr)
+arr.splice(2,3)
+console.log(arr)
+arr.splice(1,1,10,20,30,40)
+console.log(arr)
