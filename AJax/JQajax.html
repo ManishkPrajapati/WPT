@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="./jquery-3.6.0.js"></script>
+        <script>
+            $().ready(()=>{
+                $(":button").click(()=>{
+                    $.get(`https://reqres.in/api/users/2`,(req,res)=>{
+                        console.log(res)
+                        $("#p1").html(`<img src="${res.data.avatar}" alt="not found"/>`)
+                    })
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <input type="button" value="Get data from ajax server that is dummy" />
+        <p id="p1"></p>
+    </body>
+</html>
