@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="./jquery-3.6.0.js"></script>
+        <script>
+            $().ready(()=>{
+                let intervalId
+                let cnt=0
+                $("#i1").click(()=>{
+                    intervalId = setInterval(()=>{
+                        cnt++
+                        $("#p1").html(`<b>${cnt}</b>`)
+                    },500)
+                })
+                $("#i2").click(()=>{
+                    clearInterval(intervalId)
+                })
+                $("#r1").click(()=>{
+                    cnt=0
+                    $("#p1").html(cnt)
+                    clearInterval(intervalId)
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <input type="button" value="start" id="i1">
+        <p id="p1">0</p>
+        <input type="button" value="stop" id="i2">
+        <input type="reset" id="r1">
+    </body>
+</html>
