@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script src="./jquery-3.6.0.js"></script>
+        <script>
+            $().ready(()=>{
+                let arr = ["IronMan","Thor","Hulk"]
+                arr.forEach((ele)=>{
+                    $("#s1").append(`<option>${ele}</option>`)
+                })
+                $("#i1").change(()=>{
+                    let v = $("#i1").val()
+                    $("#s1").append(`<option>${v}</option>`)
+                })
+            })
+        </script>
+    </head>
+    <body>
+        Enter : <input type="text" id="i1">
+        <select id="s1"></select>
+    </body>
+</html>
