@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    function f1() {
+      let a = document.getElementById("i1").value;
+      let sel = document.querySelector('input[name="c1"]:checked').value; // Corrected selector
+      let ustr;
+
+      switch(sel) {
+        case "Uc": ustr = a.toUpperCase(); break;
+        case "Lc": ustr = a.toLowerCase(); break;
+        case "Tc": ustr = a.charAt(0).toUpperCase() + a.substring(1).toLowerCase(); break; // Corrected substring
+      }
+
+      document.getElementById("p1").innerHTML = "<b>" + ustr + "</b>";
+    }
+  </script>
+</head>
+<body>
+  Enter String: <input type="text" id="i1" />
+  <input type="radio" name="c1" value="Uc" onchange="f1()"> Uc
+  <input type="radio" name="c1" value="Lc" onchange="f1()"> Lc
+  <input type="radio" name="c1" value="Tc" onchange="f1()"> Tc
+  <p id="p1"></p>
+</body>
+</html>

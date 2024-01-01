@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<script>
+  function f1(){
+  let x = parseInt(document.getElementById("n1").value)
+  let y = parseInt(document.getElementById("n2").value)
+  let op = document.getElementById("s1").value
+  let res
+  switch(op){
+    case '+': res = x+y;break;
+    case '-': res = x-y;break;
+    case '*': res = x*y;break;
+    case '/': res = x/y;break;
+  }
+  document.getElementById("p1").innerHTML = x+"+"+y +" = "+ res
+}
+</script>
+
+</head>
+<body>
+  
+  Enter first Number : <input type="number" id="n1" />
+  Enter Second Number : <input type="number" id="n2" />
+  Select Operator <select id="s1" onchange="f1()">
+    <option>+</option>
+    <option>-</option>
+    <option>/</option>
+    <option>*</option>
+  </select>
+  <p id="p1" ></p>
+
+</body>
+</html>
