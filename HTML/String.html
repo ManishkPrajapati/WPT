@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reverse String</title>
+    <style>
+        input{
+            border-radius: 7px;
+            border-color: chocolate;
+        }
+        p{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+            font-weight: 600;
+            color: rgb(51, 78, 4);
+        }
+    </style>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+$(document).ready(() => {
+    $("#i1").change(() => {
+        let str = $("#i1").val();
+        let uc = str.split("").reverse().join("");
+        $("span").html(`<b>${uc}</b>`);
+    });
+});
+
+    </script>
+</head>
+<body style="padding-top: 150px; padding-left:80px;">
+    <fieldset style="width: 80%; border-color: blanchedalmond; border-radius: 10px;">
+        <input type="text" id="i1" class="c1" value="Enter String"/>
+        <p>Reverse String is : <span></span></p>
+    </fieldset>
+</body>
+</html>

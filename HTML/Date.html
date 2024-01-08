@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DATE</title>
-</head>
-<script>
-    function dateTime(){
-        let a = document.getElementById("d1").value
-        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        console.log(a)
-        const d = new Date(a);
-        let day = days[d.getDay()];
-        if( day.localeCompare("Sunday") == 0){
-            day = "Bank Holiday"
-        }
-        document.getElementById("s1").innerHTML = day
+    
+    <title>Calender</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding-top: 150px;
     }
-</script>
-<body>
-    <fieldset>
-        Enter Date : <input type="date" id="d1" onchange="dateTime()">
-        <p>WeekDay : <span id="s1"></span></p>
-    </fieldset>
+
+    fieldset {
+        width: 200px;
+        margin: 0 auto;
+        border: 2px solid #015e11;
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    input[type="date"] {
+        margin-top: 10px;
+        border-radius: 2px;
+    }
+
+</style>
+
+    <script>
+        function f1(){
+            let d = document.getElementById("d1").value
+            document.getElementById("s1").innerHTML = d
+        }
+    </script>
+
+</head>
+<body style="text-align: center;">
+<fieldset >
+    <p style="background-color: rgb(8, 126, 86); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 600;">Select Date</p>
+    <input type="date" id="d1" value="a" onchange="f1()"/>
+    <p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 600;"> You Selected : <span id="s1"></span></p>
+    <p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 600;"> Today is : 2024-01-08</p> 
+</fieldset>  
 </body>
 </html>
